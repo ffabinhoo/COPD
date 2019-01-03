@@ -2,7 +2,8 @@
 header <- dashboardHeader(title = "COPD - Web application - Sax Institute")
 
 sidebar <- dashboardSidebar(sidebarMenu(
-  menuItem("COPD - General", tabName = "dashboard", icon = icon("table"))
+  menuItem("Main Page - Content", tabName = "main", icon = icon("table"))
+  ,menuItem("COPD - DashBoard", tabName = "dashboard", icon = icon("table"))
   ,menuItem("Incidence by Year", tabName = "tab1", icon = icon("chart-bar"))
   ,menuItem("Incidence by Variable", tabName = "tab2", icon = icon("chart-bar"))
   ,menuItem("Scenario - Conf interval", tabName = "tab3", icon = icon("chart-bar"))
@@ -13,6 +14,7 @@ sidebar <- dashboardSidebar(sidebarMenu(
 body <- dashboardBody(
   
   tabItems(
+    source("ui/main-page-ui.R", local = TRUE)$value,
     source("ui/01-dashboard-ui.R", local = TRUE)$value,
     source("ui/02-tab-ui.R", local = TRUE)$value,
     source("ui/03-tab-ui.R", local = TRUE)$value,

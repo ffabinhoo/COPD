@@ -18,7 +18,7 @@ RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubu
     rm -f version.txt ss-latest.deb
 
 RUN R -e "install.packages(c('shiny', 'shinydashboard'), repos='http://cran.rstudio.com/')"
-RUN R -e "install.packages(c('Rcpp','dplyr', 'DT', 'shinyWidgets', 'tools', 'reshape2', 'plotly', 'tidyverse', 'dygraphs', 'highcharter','crosstalk'), repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages(c('Rcpp','dplyr', 'DT', 'shinyWidgets', 'tools', 'reshape2', 'plotly', 'tidyverse', 'dygraphs', 'highcharter','crosstalk', 'ggvis'), repos='http://cran.rstudio.com/')"
 
 
 COPY shiny-server.conf  /etc/shiny-server/shiny-server.conf

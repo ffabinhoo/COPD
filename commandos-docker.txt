@@ -1,11 +1,11 @@
 
 docker container ps -a
-docker stop shinyapp
+docker stop copd
 docker container prune
 
-docker build -t shinyapp .
-docker run -p 80:80 --name shinyapp shinyapp 
-docker stop shinyapp 
-docker container prune
+docker build -t copd .
+docker run -p 80:80 --name copd copd 
 
-docker exec -it shinyapp bash
+
+
+docker exec -it copd bash
