@@ -1,0 +1,13 @@
+name: COPD
+title: COPD
+username:
+account: ffabinhoo
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 619128
+bundleId: 1786198
+url: https://ffabinhoo.shinyapps.io/COPD/
+when: 1545960647.71652
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: desktop.ini|www/desktop.ini|www/img/desktop.ini

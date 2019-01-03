@@ -1,0 +1,11 @@
+
+docker container ps -a
+docker stop shinyapp
+docker container prune
+
+docker build -t shinyapp .
+docker run -p 80:80 --name shinyapp shinyapp 
+docker stop shinyapp 
+docker container prune
+
+docker exec -it shinyapp bash
